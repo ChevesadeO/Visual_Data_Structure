@@ -1,82 +1,99 @@
-Visualizador de Estructuras de Datos
-Aplicación web interactiva diseñada para la visualización y comprensión de estructuras de datos fundamentales como listas enlazadas, pilas y colas, mediante representaciones gráficas dinámicas y ejecución paso a paso.
+# Visual Data Structure
 
-Descripción del proyecto
+Herramienta educativa interactiva para comprender **listas enlazadas, pilas, colas, árboles BST y grafos** mediante visualización dinámica, ejecución paso a paso y pseudocódigo resaltado.
 
-Este proyecto fue desarrollado como parte de la Jornada de Iniciación Científica (JIC) 2026 – Universidad Tecnológica de Panamá, con el objetivo de facilitar el aprendizaje de estructuras de datos a través de una interfaz visual moderna e intuitiva.
+Proyecto presentado en la **JIC UTP 2026** (Universidad Tecnológica de Panamá, Centro Regional de Colón).
 
-La aplicación permite a los usuarios:
-Insertar y eliminar elementos
-Visualizar el comportamiento de cada estructura en tiempo real
-Ejecutar operaciones en modo paso a paso
-Comprender la lógica mediante pseudocódigo dinámico
-🧠 Estructuras implementadas
-🔗 Lista enlazada
-📚 Pila (LIFO)
-🚶 Cola (FIFO)
-✨ Funcionalidades principales
-🎯 Visualización interactiva en tiempo real
-⚙️ Modo Paso a Paso para aprendizaje guiado
-🧾 Pseudocódigo dinámico según operación
-🌙 Modo oscuro con persistencia
-🎨 Interfaz moderna con animaciones suaves
-🔔 Notificaciones (toast) para acciones del usuario
+🔗 **Demo en línea:** https://visualdatastructure.xo.je/
 
-Tecnologías utilizadas
--HTML5
--CSS3 (Variables, Flexbox, Grid, Animaciones)
--JavaScript (Vanilla JS)
+<!-- Agrega aquí una captura o GIF: -->
+<!-- ![Visual Data Structure](docs/captura.png) -->
 
-Vista previa
+## Características
 
-<img width="1918" height="740" alt="image" src="https://github.com/user-attachments/assets/b759e21e-c172-432b-b6f2-79c81c9ebd6a" />
+- **Cinco estructuras de datos:** Lista, Pila, Cola, Árbol BST y Grafo, dibujadas en tiempo real con SVG.
+- **Modo paso a paso:** cada inserción o eliminación se anima por etapas.
+- **Pseudocódigo sincronizado:** la línea que se ejecuta se resalta mientras avanza la animación.
+- **Panel informativo** con la descripción y la referencia visual de cada estructura.
+- **Juego de preguntas** para poner a prueba lo aprendido.
+- **Modo desafíos** con puntos y rachas. El progreso se guarda en el navegador.
+- **Tema claro y oscuro.**
+- **Módulo de evaluación** de usabilidad y aprendizaje (ver más abajo).
 
-<img width="1919" height="521" alt="image" src="https://github.com/user-attachments/assets/4407e8a2-cdc2-48bc-a61d-19b08e7c6eb5" />
+## Módulo de evaluación
 
-<img width="1915" height="533" alt="image" src="https://github.com/user-attachments/assets/d53a66ca-f67a-4c67-a1d1-dfe6cf09eedd" />
+Permite medir si la herramienta ayuda a aprender y si es fácil de usar:
 
-Estructura del proyecto
-📁 proyecto/
-│── index.html
-│── css/
-│   └── style.css
-│── js/
-│   └── app.js
-│── README.md
+1. **Pretest:** conocimiento previo del participante.
+2. **Exploración** de la aplicación.
+3. **Postest + escala SUS** (System Usability Scale, 10 preguntas) y preguntas abiertas.
 
-Cómo ejecutar el proyecto
-Clonar el repositorio:
-git clone https://github.com/ChevesadeO/PROYECTO_JIC_2026_VISUAL_-STRUCTURE.git
+Los resultados se guardan en MySQL. Un **panel de administración** (`admin/resultados.html`) muestra el total de participantes, el puntaje SUS promedio, la mejora entre pretest y postest, la distribución por categoría SUS y cuántos usarían la aplicación.
 
-Abrir el archivo:
--index.html
-¡Listo! 
+### Resultados del estudio
 
-Aplicación académica
-Este sistema fue diseñado como herramienta didáctica para:
--Apoyar la enseñanza de estructuras de datos
--Mejorar la comprensión visual de algoritmos
--Facilitar el aprendizaje interactivo
+<!-- Completa con tus datos reales: -->
 
-Ejemplo de uso
-Seleccionar una estructura (Lista, Pila o Cola)
-Ingresar un valor numérico
-Elegir una acción:
--Insertar
--Eliminar
--Paso a paso
--Observar la visualización y el pseudocódigo
+| Métrica | Resultado |
+|---|---|
+| Participantes | [N] |
+| SUS promedio | [__ / 100] |
+| Pretest promedio | [__] |
+| Postest promedio | [__] |
+| Participantes que mejoraron | [__ %] |
 
-Contribuciones futuras
-Soporte para más estructuras (árboles, grafos)
-Animaciones avanzadas paso a paso
-Exportación de operaciones
-Modo educativo con explicaciones detalladas
+## Tecnologías
 
-Autor
-Desarrollado por Chevesade Ornano, Jason Ospina, Mariel Jordan
-Estudiante de Lic. en Desarrollo y Gestión de Software 4° año
-Universidad Tecnológica de Panamá, Centro Regional de Colón
+- **Frontend:** HTML, CSS y JavaScript (sin frameworks), SVG
+- **Backend:** PHP (PDO) y MySQL
+- **Móvil:** estructura preparada para Apache Cordova
+- **Hosting:** InfinityFree
 
-Licencia
-Este proyecto es de uso académico y educativo.
+## Estructura del proyecto
+
+```
+.
+├── index.html            # Aplicación principal
+├── css/style.css         # Estilos y temas
+├── js/app.js             # Lógica, visualizaciones, juego, desafíos y evaluación
+├── img/logo.png
+├── admin/
+│   └── resultados.html   # Panel de resultados (requiere clave de administrador)
+└── api/
+    ├── guardar_evaluacion.php
+    ├── obtener_resultados.php
+    ├── crear_tabla.sql
+    └── config.example.php   # Copia de configuración de ejemplo
+```
+
+## Cómo ejecutarlo
+
+### Solo las visualizaciones (sin evaluación)
+
+Abre `index.html` en el navegador, o sírvelo con cualquier servidor estático.
+
+### Con el módulo de evaluación
+
+Necesitas PHP 8+ y MySQL.
+
+1. Crea una base de datos y ejecuta `api/crear_tabla.sql`.
+2. Copia `api/config.example.php` a `api/config.php` y completa los datos de tu base de datos y una **clave de administrador propia**.
+3. Sirve el proyecto con PHP (por ejemplo `php -S localhost:8000`) y abre `http://localhost:8000`.
+4. Entra a `/admin/resultados.html` e ingresa tu clave para ver los resultados.
+
+> `api/config.php` contiene credenciales y está excluido del repositorio mediante `.gitignore`. Nunca lo subas.
+
+## Privacidad
+
+El módulo de evaluación guarda las respuestas del participante (carrera, año, resultados de los tests y comentarios). [Indica aquí si también se registra la IP y cómo se informa al participante.]
+
+## Autor
+
+**Chevesade Ornano**
+Estudiante de Desarrollo y Gestión de Software, UTP Centro Regional de Colón.
+
+[LinkedIn](https://www.linkedin.com/in/chevesadeornano/) · [GitHub](https://github.com/ChevesadeO)
+
+## Licencia
+
+[MIT](LICENSE)
