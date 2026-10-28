@@ -4,7 +4,7 @@ Herramienta educativa interactiva para comprender **listas enlazadas, pilas, col
 
 Proyecto presentado en la **JIC UTP 2026** (Universidad Tecnológica de Panamá, Centro Regional de Colón).
 
-🔗 **Demo en línea:** https://visualdatastructure.xo.je/
+🔗 **Demo en línea:** esta en reconstrucción, pronto será visible nuevamente.
 
 <!-- Agrega aquí una captura o GIF: -->
 <!-- ![Visual Data Structure](docs/captura.png) -->
