@@ -90,7 +90,7 @@ El módulo de evaluación guarda las respuestas del participante (carrera, año,
 ## Autor
 
 **Chevesade Ornano**
-Estudiante de Desarrollo y Gestión de Software, UTP Centro Regional de Colón.
+Estudiante de 4to año de Desarrollo y Gestión de Software, UTP Centro Regional de Colón.
 
 [LinkedIn](https://www.linkedin.com/in/chevesadeornano/) · [GitHub](https://github.com/ChevesadeO)
 
